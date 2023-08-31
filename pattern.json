@@ -1,0 +1,29 @@
+{
+    "usable pattern_type": {
+        "keyword in time": {
+            "#Triggering conditions": "The keyword appears more than the threshold in a time range",
+            "pattern_name": "pattern name",
+            "pattern_type": "keyword in time",
+            "keyword": "a regex string",
+            "appeared_threshold": "appears times, in interger",
+            "time_range": "second, in interger"
+        }
+    },
+    "pattern 0": {
+        "pattern_name": "pattern 0",
+        "pattern_type": "keyword in time",
+        "keyword": "(qweqwe)|(asd)",
+        "appeared_threshold": "1",
+        "time_range": "100",
+        "mail": {
+            "mail_to": "louischouasus@gmail.com",
+            "mail_subject": "!pattern_name detected",
+            "mail_content": "!pattern_name detected at !time  !log"
+        },
+        "teams": {
+            "teams_webhook": "https://asus.webhook.office.com/webhookb2/fabe48dd-cb6b-4366-8fa8-6bcd119dfad6@301f59c4-c269-4a66-8a8c-f5daab211fa3/IncomingWebhook/c1cd9aeec5b54f2b979c1db03f7228ae/6734445d-3ebc-42dc-8e6e-f659507dd1f9",
+            "teams_subject": "test",
+            "teams_content": " heehehe !time !log"
+        }
+    }
+}

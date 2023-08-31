@@ -1,0 +1,7 @@
+python3
+python lib:
+    regex
+    smtplib
+    json
+    paramiko
+    

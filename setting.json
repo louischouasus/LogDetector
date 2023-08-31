@@ -1,0 +1,7 @@
+{
+    "ip": "192.168.124.1",
+    "port": "22",
+    "username": "admin",
+    "password": "asus#1234",
+    "file_path": "/tmp/syslog.log"
+}
