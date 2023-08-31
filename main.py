@@ -1,6 +1,5 @@
 import json
 import connect_to_router
-import send_mail
 import create_setting
 import search_pattern
 import os

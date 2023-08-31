@@ -34,22 +34,22 @@ def create_pattern_file():
     }
 
     # add template of user defined patterns
-    for i in range(1):
+    for i in range(2):
         pattern["pattern " + str(i)] = {
             "pattern_name": "pattern " + str(i),
             "pattern_type": "keyword in time",
-            "keyword": "qweqwe",
+            "keyword": "regex string",
             "appeared_threshold": "2",
             "time_range": "100",
             "mail": {
-                "mail_to": "louischouasus@gmail.com",
+                "mail_to": "mail1@gmail.com;mail2@gmail.com",
                 "mail_subject": "!pattern_name detected",
-                "mail_content": "!pattern_name detected at !time",
+                "mail_content": "!pattern_name detected at !time,  !log",
             },
             "teams": {
                 "teams_webhook": "",
-                "teams_subject": "",
-                "teams_content": "",
+                "teams_subject": "!pattern_name detected",
+                "teams_content": "!pattern_name detected at !time,  !log",
             },
         }
 
