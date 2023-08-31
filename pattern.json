@@ -21,7 +21,7 @@
             "mail_content": "!pattern_name detected at !time,  !log"
         },
         "teams": {
-            "teams_webhook": "",
+            "teams_webhook": "https://asus.webhook.office.com/webhookb2/fabe48dd-cb6b-4366-8fa8-6bcd119dfad6@301f59c4-c269-4a66-8a8c-f5daab211fa3/IncomingWebhook/66e8942c91a040bbbc19cd769af3cffa/6734445d-3ebc-42dc-8e6e-f659507dd1f9",
             "teams_subject": "!pattern_name detected",
             "teams_content": "!pattern_name detected at !time,  !log"
         }
