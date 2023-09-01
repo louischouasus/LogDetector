@@ -1,5 +1,6 @@
 import regex
 from datetime import datetime
+from paramiko import SSHClient
 from paramiko.channel import ChannelFile
 import send_mail
 import send_teams
@@ -15,7 +16,7 @@ def verify_pattern_dict(pattern_dict: dict):
             return False
 
 
-def search_pattern(stdout: ChannelFile, patterns_dict: dict):
+def search_pattern(ssh_client: SSHClient, stdout: ChannelFile, patterns_dict: dict):
     # init
     for pattern_name in patterns_dict:
         # add count list to every pattern
@@ -24,7 +25,9 @@ def search_pattern(stdout: ChannelFile, patterns_dict: dict):
             patterns_dict[pattern_name]["log"] = []
 
     # read log lines from ssh tail
-    for line in iter(stdout.readline, ""):
+    while ssh_client.invoke_shell().active:
+        print("live")
+        line = stdout.readline().strip()
         print("recieve log line: " + line)
         time = parse_time_from_logline(line)
 

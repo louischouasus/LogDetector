@@ -20,5 +20,5 @@ def cat_syslog(ssh: paramiko.SSHClient, syslog_path: str):
 
 
 def tail_syslog(ssh: paramiko.SSHClient, syslog_path: str):
-    stdin, stdout, stderr = ssh.exec_command(f"tail -f {syslog_path}")
+    stdin, stdout, stderr = ssh.exec_command(f"tail -f {syslog_path}", timeout=10)
     return stdin, stdout, stderr
